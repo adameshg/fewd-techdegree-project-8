@@ -1,5 +1,5 @@
-const randomUserUrl = 'https://randomuser.me/api/';
-const employeeList = document.getElementById('employees');
+const randomUserUrl = 'https://randomuser.me/api/?results=12&inc=name,%20picture,%20email,%20location,%20phone,%20dob%20&noinfo';
+const gridContainer = document.querySelector('.grid-container');
 const employees = [];
 
 // Fetch data from API
@@ -14,7 +14,7 @@ fetch(randomUserUrl)
 // Generate HTML from JSON
 function generateHTML(data) {
     const div = document.createElement('div');
-    employeeList.appendChild(div);
+    gridContainer.appendChild(div);
     div.innerHTML = `
         <div class="employee-card">
             <div class="img-div">
