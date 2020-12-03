@@ -71,7 +71,7 @@ function displayModal(index) {
         </div>
     `;
 
-    overlay.style.display = 'block';
+    overlay.style.display = 'flex';
     modal.innerHTML = modalHTML;
 }
 
